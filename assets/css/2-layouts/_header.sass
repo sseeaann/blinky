@@ -1,0 +1,88 @@
+header
+  background:
+    image: url(../img/headerBG.png)
+    attachment: fixed
+    position: top center
+    size: 100%
+  text-align: center
+  position: relative
+  height: 730px
+  width: 100%
+  overflow: hidden
+
+  .overlay-shadow
+    position: absolute
+    background: rgba(0,0,0,0.5)
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1
+    opacity: 0
+
+  .overlay
+    position: absolute
+    background: rgba($pink, 0.87)
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    @include display(flex)
+    @include align-items(center)
+    @include justify-content(center)
+
+    .content
+      z-index: 1
+
+      #logo
+        margin: 45px auto 32px
+        height: 110px
+        cursor: pointer
+        opacity: 0
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+        &.animated
+          opacity: 1
+
+      h1,
+      h2
+        margin: 0
+
+      h1
+        font-size: 48px
+
+      h2
+        font-size: 18px
+        font-family: 'Georgia', serif
+        font-weight: 400
+        opacity: .75
+        margin-bottom: 74px
+
+      .cta
+        color: $pink
+        background: $white
+        margin-bottom: 110px
+
+        &:hover
+          background: $aqua
+          color: $white
+
+@media (max-width: 480px)
+  body header .overlay .content
+    h1
+      font-size: 7vw
+
+@media (max-height: 414px)
+  body
+    header
+      height: 100vh
+
+      .overlay
+        padding: 50px 0 0
+
+        .content
+          #logo
+            margin-bottom: 10px
+
+          h2
+            margin-bottom: 30px

@@ -1,0 +1,154 @@
+body
+  color: $white
+  position: relative
+  overflow-x: hidden
+
+.cta
+  text-decoration: none
+  display: inline-block
+  border-radius: 40px
+  font-size: 15px
+  padding: 11px 42px
+
+.contactOverlay
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0,0,0,0.75)
+  opacity: 0
+  pointer-events: none
+  transition: all 250ms ease-in-out
+  z-index: 3
+
+  &.is-open
+    opacity: 1
+    pointer-events: auto
+
+  .modal
+    height: 100%
+    position: absolute
+    top: 0
+    right: 0
+    transition: all 600ms ease-in-out
+    z-index: 4
+
+    .modalContent
+      width: 430px
+      background: $white
+      height: 100%
+
+      #signup
+        text-align: center
+
+        p
+          margin: 0 auto
+          color: $greyText
+          font-size: 14px
+          padding: 31px 20px
+          box-sizing: border-box
+          width: 380px
+
+        #mc_embed_signup
+          form
+            @include display(flex)
+            @include flex-direction(column)
+            @include align-items(center)
+
+            #mc_embed_signup_scroll
+              #errors p
+                color: red
+                padding: 5px
+
+              input
+                width: 90%
+
+                &[type="email"]
+                  border: none
+                  padding: 13px
+                  box-sizing: border-box
+                  background: #D8D8D8
+                  border-radius: 6px
+                  color: $greyText
+                  width: 320px
+
+                &[type="submit"]
+                  border: none
+                  background: $blue
+                  margin: 41px 0 20px
+                  font-size: 18px
+                  width: 271px
+                  outline: none
+
+      #signup-success
+        text-align: center
+        display: none
+
+        p
+          padding: 0 25px
+          color: $greyText
+          font-size: 14px
+
+        p#lead
+          font-weight: 600
+          margin-bottom: 18px
+          padding-top: 31px
+
+        a
+          display: inline-block
+          margin: 38px 25px
+
+          img:hover
+            @include animation-name(pulse)
+            @include animation-duration(.5s)
+
+      .hero
+        position: relative
+        width: 100%
+        height: 200px
+        background: $pink
+        @include display(flex)
+        @include align-items(center)
+        @include justify-content(center)
+        @include flex-direction(column)
+
+        i.ion-close-round
+          position: absolute
+          top: 14px
+          right: 13px
+          background: rgba(0,0,0,0.25)
+          padding: 7px 10px 6px
+          border-radius: 50%
+          cursor: pointer
+
+          &:hover
+            background: rgba(0,0,0,0.5)
+
+        h3
+          margin: 18px auto 0
+          font-size: 24px
+          font-weight: 400
+
+
+@media (max-width: 430px)
+  body .contactOverlay .modal
+    .modalContent
+      width: 100%
+
+      #signup
+        p
+          width: 90%
+
+@media (max-width: 320px)
+  body .contactOverlay .modal #signup #mc_embed_signup #mc_embed_signup_scroll
+    input[type="email"]
+      width: 300px
+
+@media (max-height: 517px)
+  body .contactOverlay
+    .modal
+      overflow: scroll
+
+      .modalContent
+        height: auto

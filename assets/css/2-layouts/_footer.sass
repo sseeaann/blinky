@@ -1,0 +1,46 @@
+footer
+  background: blue
+  position: relative
+  height: 455px
+  background:
+    image: url(../img/footerBG.jpg)
+    repeat: no-repeat
+    position: center
+    size: cover
+
+  .overlay
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba($aqua, .74)
+    @include display(flex)
+    @include flex-direction(column)
+    @include justify-content(center)
+    @include align-items(center)
+
+    p
+      margin: 0 auto 66px
+      font-size: 36px
+
+      &#comingSoon
+        opacity: 0
+
+        &.animated
+          opacity: 1
+
+      &#copywrite
+        font-size: 12px
+        margin: 52px auto 0
+
+    a
+      text-decoration: none
+      color: $white
+
+
+    i.ion-social-twitter
+      border: 2px solid $white
+      font-size: 28px
+      border-radius: 50%
+      padding: 13px 15px 12px
