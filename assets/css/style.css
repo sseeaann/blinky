@@ -1281,7 +1281,7 @@ body {
     body .contactOverlay .modal .modalContent {
       height: auto; } }
 header {
-  background-image: url(../img/headerBG.png);
+  background-image: url(http://d1tdrzz6qd56ia.cloudfront.net/assets/img/headerBG.png);
   background-attachment: fixed;
   background-position: top center;
   background-size: 100%;
@@ -1335,7 +1335,6 @@ header {
       z-index: 1; }
       header .overlay .content #logo {
         margin: 45px auto 32px;
-        height: 110px;
         cursor: pointer;
         opacity: 0;
         -webkit-tap-highlight-color: transparent; }
@@ -1373,7 +1372,7 @@ header {
       body header .overlay .content h2 {
         margin-bottom: 30px; } }
 main {
-  background-image: url(../img/mainBG.jpg);
+  background-image: url(http://d1tdrzz6qd56ia.cloudfront.net/assets/img/mainBG.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -1413,7 +1412,7 @@ footer {
   background: blue;
   position: relative;
   height: 455px;
-  background-image: url(../img/footerBG.jpg);
+  background-image: url(http://d1tdrzz6qd56ia.cloudfront.net/assets/img/footerBG.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }

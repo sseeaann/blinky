@@ -1547,9 +1547,9 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "Blinka",
+	"displayValue": "Blinky",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "harddrive_gray"
+	"iconImageName": "globe_yellow"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,
