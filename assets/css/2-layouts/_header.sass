@@ -6,7 +6,7 @@ header
     size: 100%
   text-align: center
   position: relative
-  height: 730px
+  height: 575px
   width: 100%
   overflow: hidden
 
@@ -35,10 +35,9 @@ header
       z-index: 1
 
       #logo
-        margin: 45px auto 32px
+        margin: 0 auto 20px
         cursor: pointer
         opacity: 0
-        -webkit-tap-highlight-color: rgba(0,0,0,0)
 
         &.animated
           opacity: 1
@@ -54,34 +53,96 @@ header
         font-size: 18px
         font-family: 'Georgia', serif
         font-weight: 400
-        opacity: .75
-        margin-bottom: 74px
+        color: rgba(255,255,255,.75)
+        margin-bottom: 65px
 
-      .cta
-        color: $pink
-        background: $white
-        margin-bottom: 110px
+      #signup
+        #mc_embed_signup
+          form
+            #errors p
+              text-shadow: 0 0 5px $blue
+              padding: 5px
+              margin: 0
 
-        &:hover
-          background: $aqua
-          color: $white
+            #mc_embed_signup_scroll
+              @include display(flex)
+              @include justify-content(center)
+
+              input
+                display: inline-block
+                box-sizing: border-box
+                text-align: center
+
+                &[type="email"]
+                  border: none
+                  padding: 12px 12px 12px 45px
+                  background: rgba(white, 0.5)
+                  border-radius: 3px 0 0 3px
+                  color: white
+                  width: 320px
+                  background:
+                    image: url(../img/form-mail.svg)
+                    repeat: no-repeat
+                    position: 15px
+
+                  @include placeholder
+                    color: white
+
+                &[type="submit"]
+                  border: none
+                  background: white
+                  font-size: 14px
+                  color: $pink
+                  padding: 13px 34px
+                  border-radius: 0 3px 3px 0
+
+      #signup-success
+        text-align: center
+        display: none
+
+        p
+          padding: 0 25px
+          color: white
+          font-size: 14px
+          margin: 0
+
+        a
+          display: inline-block
+          margin: 38px 25px
+
+          img:hover
+            @include animation-name(pulse)
+            @include animation-duration(.5s)
 
 @media (max-width: 480px)
-  body header .overlay .content
-    h1
-      font-size: 7vw
+  header .overlay
+    .content
+      padding: 0 5px
+
+      h1
+        font-size: 7vw
+
+      #signup #mc_embed_signup form
+        #mc_embed_signup_scroll
+          @include flex-direction(column)
+
+          input
+            &[type="email"]
+              width: 90%
+
+            &[type="submit"]
+              margin-top: 20px
+              width: 90%
 
 @media (max-height: 414px)
-  body
-    header
-      height: 100vh
+  header
+    .overlay
+      padding: 50px 0 0
 
-      .overlay
-        padding: 50px 0 0
+      .content
+        #logo
+          margin-bottom: 10px
+          width: auto
 
-        .content
-          #logo
-            margin-bottom: 10px
-
-          h2
-            margin-bottom: 30px
+        h2
+          margin-bottom: 30px

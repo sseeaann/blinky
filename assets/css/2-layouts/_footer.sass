@@ -2,23 +2,18 @@ footer
   background: blue
   position: relative
   height: 455px
-  background:
-    image: url(http://d1tdrzz6qd56ia.cloudfront.net/assets/img/footerBG.jpg)
-    repeat: no-repeat
-    position: center
-    size: cover
+  background: #19C9DF
+  @include display(flex)
+  @include flex-direction(column)
+  @include justify-content(center)
+  @include align-items(center)
+  overflow: hidden
 
-  .overlay
-    position: absolute
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    background: rgba($aqua, .74)
-    @include display(flex)
-    @include flex-direction(column)
-    @include justify-content(center)
-    @include align-items(center)
+  .container
+    position: relative
+    width: 100%
+    max-width: 500px
+    text-align: center
 
     p
       margin: 0 auto 66px
@@ -26,6 +21,8 @@ footer
 
       &#comingSoon
         opacity: 0
+        text-align: left
+        padding-left: 50px
 
         &.animated
           opacity: 1
@@ -34,13 +31,31 @@ footer
         font-size: 12px
         margin: 52px auto 0
 
+    #app-store
+      position: absolute
+      top: 0
+      right: 50px
+      cursor: no-drop
+      opacity: 0
+
     a
       text-decoration: none
       color: $white
 
+    .social-contact
+      .social
+        margin: 0 25px
 
-    i.ion-social-twitter
-      border: 2px solid $white
-      font-size: 28px
-      border-radius: 50%
-      padding: 13px 15px 12px
+
+@media (max-width: 515px)
+  footer .container
+    p#comingSoon
+      padding-left: 0
+      text-align: center
+      margin-bottom: 20px
+
+    #app-store
+      position: relative
+      top: auto
+      right: auto
+      margin-bottom: 50px

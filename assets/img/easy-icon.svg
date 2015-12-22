@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="56px" viewBox="0 0 50 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 49 + Oval 12 + 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-771.000000, -751.000000)">
+            <g id="Rectangle-49-+-Oval-12-+-7" sketch:type="MSLayerGroup" transform="translate(771.000000, 753.000000)">
+                <rect id="Rectangle-49" stroke="#D8D8D8" stroke-width="4" sketch:type="MSShapeGroup" x="0" y="6.42857143" width="46.9268293" height="47.5714286" rx="13"></rect>
+                <ellipse id="Oval-12" stroke="#FFFFFF" stroke-width="3" fill="#FF5D89" sketch:type="MSShapeGroup" cx="41.5365854" cy="10.6071429" rx="10.4634146" ry="10.6071429"></ellipse>
+                <text id="7" sketch:type="MSTextLayer" font-family=".AppleSystemUIFont" font-size="11" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="38.3170732" y="15.1428571">7</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

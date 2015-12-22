@@ -11,6 +11,7 @@
     <meta name="twitter:title" content="Your world in a blink | Blinky">
     <meta name="twitter:description" content="Your world in a blink. Create or explore 10 second videos from all around the world.">
     <meta name="twitter:image" content="http://d1tdrzz6qd56ia.cloudfront.net/assets/img/TwittercardBlinky.png">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Your world in a blink | Blinky">
     <meta property="og:url" content="http://www.blinkyapp.com/">
     <meta property="og:image" content="http://d1tdrzz6qd56ia.cloudfront.net/assets/img/TwittercardBlinky.png">
@@ -25,55 +26,17 @@
       <div class="overlay-shadow"></div>
       <div class="overlay">
         <div class="content">
-          <img src="http://d1tdrzz6qd56ia.cloudfront.net/assets/img/logo.png" alt="logo" id="logo"/>
-          <h1>Your world in a blink</h1>
-          <h2>Create or explore 10 second videos from around the world, everyday.</h2>
-          <a href="javascript:;" class="cta">Get Early Access</a>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <div class="container">
-        <p>
-          Create and explore all types of 10 second videos <span id="break"><span> from all over the world, everyday.
-        </p>
-        <a href="javascript:;" class="cta">Get Early Access</a>
-      </div>
-    </main>
-
-    <footer>
-      <div class="overlay">
-        <p id="comingSoon">
-          COMING SOON
-        </p>
-        <a href="https://twitter.com/blinkyapp" target="_blank"><i id="twitterBird" class="ion-social-twitter"></i></a>
-        <p id="copywrite">
-          Blinky &copy; 2015 | <a href="http://designfirstapps.com" target="_blank">Design First Apps</a>
-        </p>
-      </div>
-    </footer>
-
-    <div class="contactOverlay">
-      <div class="modal">
-        <div class="modalContent">
-          <div class="hero">
-            <i class="ion-close-round" id="close-btn"></i>
-            <img src="http://d1tdrzz6qd56ia.cloudfront.net/assets/img/logo-sm.png" alt="logo" />
-            <h3>Welcome to Blinky!</h3>
-          </div>
-
+          <img src="assets/img/logo.png" alt="logo" id="logo" class="no-tap"/>
+          <h1>Send friends private videos</h1>
+          <h2>Create fun videos and control who can see them, no more awkward moments.</h2>
           <div id="signup">
-            <p>
-              Get ready to experience your world in digestable little blinks. Soon you will be able to watch 10 second videos from people all over the world. Don’t forget to create your own video so people around the world can explore your world.
-            </p>
             <!-- Begin MailChimp Signup Form -->
             <div id="mc_embed_signup">
               <form action="//designfirstapps.us11.list-manage.com/subscribe/post-json?u=94a520c136f1e4c51f1856478&amp;id=6aafbdf31b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="errors"></div>
                 <div id="mc_embed_signup_scroll">
-                  <div id="errors"></div>
                   <div class="mc-field-group">
-                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="you@email.com" required>
+                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email me when it's ready" required>
                   </div>
                   <div id="mce-responses" class="clear">
                     <div class="response" id="mce-error-response" style="display:none"></div>
@@ -83,29 +46,91 @@
                     <input type="text" name="b_94a520c136f1e4c51f1856478_6aafbdf31b" tabindex="-1" value="">
                   </div>
                   <div class="clear">
-                    <input type="submit" value="Submit email" name="subscribe" id="mc-embedded-subscribe" class="button cta">
+                    <input type="submit" value="SEND" name="subscribe" id="mc-embedded-subscribe" class="button no-tap">
                   </div>
                 </div>
               </form>
             </div>
             <!--End mc_embed_signup-->
           </div>
-
           <div id="signup-success">
-            <p id="lead">
-              Confirmation has been sent! you’re on the VIP list.
+            <p>
+              Cool! We'll let you know when the app is ready to use.
             </p>
             <p>
-              Let your freinds know about Blinky so they can explore the world too, sharing is caring :)
+              In the mean time, tell some friends about us.
             </p>
-            <a href="http://twitter.com/home?status=Your%20world%20in%20a%20blink.%20Create%20or%20explore%2010%20second%20videos%20from%20all%20around%20the%20world%20%23blinky" target="_blank"><img src="http://d1tdrzz6qd56ia.cloudfront.net/assets/img/t-twitter.png" alt="share on twitter" /></a>
-            <a href="http://www.facebook.com/share.php?u=http://www.blinkyapp.com" target="_blank"><img src="http://d1tdrzz6qd56ia.cloudfront.net/assets/img/f-facebook.png" alt="share on facebook" /></a>
+            <a href="http://twitter.com/home?status=Your%20world%20in%20a%20blink.%20Create%20or%20explore%2010%20second%20videos%20from%20all%20around%20the%20world%20%23blinky" target="_blank" class="no-tap"><img src="assets/img/t-twitter.svg" alt="share on twitter" /></a>
+            <a href="http://www.facebook.com/share.php?u=http://www.blinkyapp.com" target="_blank" class="no-tap"><img src="assets/img/f-facebook.svg" alt="share on facebook" /></a>
           </div>
         </div>
       </div>
-    </div>
+    </header>
+
+    <main>
+  		<div class="container">
+  			<div class="side-phone"></div>
+  			<div class="highlights">
+          <div class="highlight" id="deadEasy">
+            <div class="icon-box">
+              <img src="assets/img/easy-icon.svg" alt="highlight" />
+            </div>
+            <div class="content-box">
+              <p class="lead">
+      					Dead Easy
+      				</p>
+      				<p>
+      					We’ll keep track of all those awesome private videos, no need to organize or delete, just enjoy them.
+      				</p>
+            </div>
+    			</div>
+    			<div class="highlight" id="shareFriends">
+            <div class="icon-box">
+              <img src="assets/img/friends-icon.svg" alt="highlight" />
+            </div>
+            <div class="content-box">
+              <p class="lead">
+      					Share with Friends
+      				</p>
+      				<p>
+      					Share or Invite friends to see your awesome videos, post to FB or send as a text.
+      				</p>
+            </div>
+    			</div>
+    			<div class="highlight" id="controlContent">
+            <div class="icon-box">
+              <img src="assets/img/control-icon.svg" alt="highlight" />
+            </div>
+            <div class="content-box">
+              <p class="lead">
+      					Control Content
+      				</p>
+      				<p>
+      					You’re in control of your videos, set limits on your videos to prevent anything bad from happening.
+      				</p>
+            </div>
+    			</div>
+  			</div>
+  		</div>
+  	</main>
+
+    <footer>
+      <div class="container">
+        <p id="comingSoon">
+          Coming soon to
+        </p>
+        <a href="javascript:;"><img src="assets/img/app-store.svg" alt="app store link" id="app-store" /></a>
+        <div class="social-contact">
+          <a href="https://twitter.com/blinkyapp" target="_blank" class="no-tap"><img src="assets/img/twitter-bird.svg" alt="twitter icon" class="social"></a>
+          <a href="mailto:hello@blinkyapp.com" target="_top" class="no-tap"><img src="assets/img/mail.svg" alt="mail icon" class="social"></a>
+        </div>
+        <p id="copywrite">
+          Blinky &copy; 2015 | <a href="http://designfirstapps.com" target="_blank">Design First Apps</a>
+        </p>
+      </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="http://d1tdrzz6qd56ia.cloudfront.net/assets/js/min/functions-min.js"></script>
+    <script type="text/javascript" src="assets/js/min/functions-min.js"></script>
   </body>
 </html>

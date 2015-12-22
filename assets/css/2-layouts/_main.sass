@@ -1,47 +1,99 @@
 main
-  background:
-    image: url(http://d1tdrzz6qd56ia.cloudfront.net/assets/img/mainBG.jpg)
-    repeat: no-repeat
-    position: top center
-    size: cover
-  height: 750px
   overflow: hidden
+  color: black
 
   .container
     margin: 0 auto
-    width: 80%
-    position: absolute
-    left: 0
-    right: 0
-    top: 70%
+    height: 800px
+    max-width: 1400px
+    position: relative
 
-    &.mobileC
+    .side-phone
+      height: 100%
+      width: 50%
+      background:
+        image: url(../img/phone.png)
+        size: cover
+        repeat: no-repeat
+        position: center 150px
+      float: left
+      visibility: hidden
+
+      &.fadeInUp
+        visibility: visible
+
+    .highlights
+      width: 50%
+      min-width: 500px
+      height: 100%
+      float: right
+      @include display(flex)
+      @include flex-direction(column)
+      @include align-items(center)
+      @include justify-content(center)
+
+      .highlight
+        width: 500px
+        margin: 50px 0
+        left: 50%
+
+        .icon-box
+          float: left
+          display: inline-block
+          margin-right: 20px
+
+        .content-box
+          width: 390px
+          display: inline-block
+
+          p
+            font-size: 14px
+            margin: 0
+
+            &.lead
+              font-size: 24px
+              margin-bottom: 5px
+
+        &#deadEasy
+          top: 150px
+          right: 25%
+
+        &#shareFriends
+          top: 350px
+          right: 10%
+
+        &#controlContent
+          top: 550px
+          right: 20%
+
+
+
+@media (max-width: 1014px)
+  main .container
+    .side-phone
+      display: none
+
+    .highlights
+      float: none
       margin: 0 auto
-      width: 80%
-      position: static
 
-    p
-      margin: 0
-      padding: 230px 0 66px
-      font-weight: 300
-      line-height: 1.25
-      text-shadow: 0px 0px 1px rgba(0,0,0,0.5)
+@media (max-width: 600px)
+  main .container
+    .highlights
+      width: 100%
+      min-width: auto
 
-      #break
-        display: block
+      .highlight
+        width: auto
 
-    .cta
-      border: 1px solid $white
-      color: $white
+        .content-box
+          width: auto
+          max-width: 300px
 
-      &:hover
-        background: rgba($white, 0.3)
+@media (max-width: 450px)
+  main .container .highlights .highlight
+    .icon-box
+      margin-right: 10px
 
-@media (max-width: 500px)
-  body main .container
-    p
-      #break
-        display: inline
-
-    .cta
-      background: rgba($greyText, 0.3)
+    .content-box
+      max-width: 240px

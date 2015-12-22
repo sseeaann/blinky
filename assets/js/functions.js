@@ -15,12 +15,12 @@ $(function(){
       counter = 0,
       $window = $(window),
       $errMsg = $('#errorMessage'),
+      $sidePhone = $('.side-phone'),
       isMobile = false;
 
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     isMobile = true;
-    $mainC.addClass('mobileC');
   }
 
   $logo.click(function(){
@@ -39,39 +39,10 @@ $(function(){
     }
   });
 
-  $('#twitterBird').mouseover(function(){
+  $('.social').mouseover(function(){
     $(this).addClass('animated scaleDown').one(endAnimation, function(){
       $(this).removeClass('scaleDown');
     });
-  });
-
-  $('.cta').click(function(){
-    $contactOverlay.addClass('is-open');
-    $body.css('overflow','hidden');
-    if(isMobile === true){
-      $modalC.addClass('slideInRight-mobile');
-    } else {
-      $modalC.addClass('slideInRight');
-    }
-  });
-
-  $('#close-btn').click(function(){
-    $contactOverlay.removeClass('is-open');
-    $body.css('overflow','initial');
-    if(isMobile === true){
-      $modalC.removeClass('slideInRight-mobile').addClass('slideOutRight').one(endAnimation, function(){
-        $(this).removeClass('slideOutRight');
-      });
-    } else {
-      $modalC.removeClass('slideInRight').addClass('slideOutRight').one(endAnimation, function(){
-        $(this).removeClass('slideOutRight');
-      });
-    }
-    $formSuccess.fadeOut('slow');
-    $signup.fadeIn('slow');
-    $errMsg.remove();
-    $("input[type='email']").css('border', 'none');
-    $form[0].reset();
   });
 
 // SCROLL Codes
@@ -82,25 +53,24 @@ $(function(){
         footerTop = $footer.offset().top;
 
 
-    if(wScroll > 0 && isMobile === false){
-      $overShadow.css({
-        'opacity' : 'calc('+ wScroll * 0.00137 +')'
-      });
-      $header.css({
-        'background-size' : 'calc('+ wScroll/35 + '% + 100%)'
-      });
-      $mainC.css({
-        'transform' : 'translate(0px, -'+ wScroll / 5 +'%)',
-        'font-size' : wScroll / 30 + 'px'
-      });
-      $content.css({
-        'transform' : 'translate(0px, '+ wScroll / 6 +'%)',
-        'opacity': 1 - (wScroll / 730)
-      });
+    if(wScroll > 0){
+      if(isMobile === false){
+        $overShadow.css({
+          'opacity' : 'calc('+ wScroll * 0.00137 +')'
+        });
+        $header.css({
+          'background-size' : 'calc('+ wScroll/35 + '% + 100%)'
+        });
+        $content.css({
+          'transform' : 'translate(0px, '+ wScroll / 6 +'%)',
+          'opacity': 1 - (wScroll / 730)
+        });
+      }
 
       if(footerTop + 200 <= docViewBottom){
         $('#comingSoon').addClass('animated lightSpeedIn').one(endAnimation, function(){
           $(this).removeClass('lightSpeedIn').addClass('bump');
+          $('#app-store').animate({'opacity':'1'}, 750);
         });
       }
 
@@ -122,6 +92,12 @@ $(function(){
         $('#comingSoon').addClass('animated bump');
       }
     }
+
+    if(wScroll > $sidePhone.offset().top - ($(window).height() / 2)){
+      $sidePhone.addClass('fadeInUp');
+    }
+
+
   });
 
 
@@ -131,7 +107,7 @@ $(function(){
     if(!isValidEmail($form)){
       $errMsg.remove();
       $('#errors').append("<p id='errorMessage'>A valid email is required.</p>");
-      $("input[type='email']").css({'border': '2px solid red', 'border-radius': '6px'});
+      $("input[type='email']").css({'color':'red'});
     } else {
       submitSubscribeForm($form);
     }
@@ -187,18 +163,6 @@ $(function(){
         $(this).removeClass('flipInY');
       });
     }, 500);
-  }
-
-  setTimeout(function(){
-    bounce();
-  }, 5000);
-
-  function bounce(){
-    setInterval(function(){
-      $logo.addClass('bounce').one(endAnimation, function(){
-        $(this).removeClass('bounce');
-      });
-    }, 30000);
   }
 
   flipIn();
