@@ -51,7 +51,6 @@ header
 
       h2
         font-size: 18px
-        font-family: 'Georgia', serif
         font-weight: 400
         color: rgba(255,255,255,.75)
         margin-bottom: 65px
@@ -134,15 +133,11 @@ header
               margin-top: 20px
               width: 90%
 
-@media (max-height: 414px)
+@media (max-width: 414px)
   header
-    .overlay
-      padding: 50px 0 0
+    .overlay .content
+      h1
+        margin: 50px 0 70px
 
-      .content
-        #logo
-          margin-bottom: 10px
-          width: auto
-
-        h2
-          margin-bottom: 30px
+      h2
+        display: none

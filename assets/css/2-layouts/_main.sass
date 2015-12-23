@@ -49,10 +49,13 @@ main
           p
             font-size: 14px
             margin: 0
+            color: #5A5A5A
+            opacity: 0.6
 
             &.lead
               font-size: 24px
-              margin-bottom: 5px
+              margin-bottom: 10px
+              opacity: 1
 
         &#deadEasy
           top: 150px
@@ -91,9 +94,13 @@ main
           max-width: 300px
 
 @media (max-width: 450px)
-  main .container .highlights .highlight
-    .icon-box
-      margin-right: 10px
+  main .container .highlights
+    .highlight
+      text-align: center
+      margin: 40px 0
 
-    .content-box
-      max-width: 240px
+      .icon-box
+        margin-bottom: 25px
+        margin-right: 0
+        float: none
+        display: block

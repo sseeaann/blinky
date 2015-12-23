@@ -1070,111 +1070,12 @@ th {
 body {
   color: #FFFFFF;
   position: relative;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
 .no-tap {
   -webkit-tap-highlight-color: transparent; }
 
-.cta {
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 40px;
-  font-size: 15px;
-  padding: 11px 42px; }
-
-.contactOverlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.75);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 250ms ease-in-out;
-  z-index: 3; }
-  .contactOverlay.is-open {
-    opacity: 1;
-    pointer-events: auto; }
-  .contactOverlay .modal {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: all 600ms ease-in-out;
-    z-index: 4; }
-    .contactOverlay .modal .modalContent {
-      width: 430px;
-      background: #FFFFFF;
-      height: 100%; }
-      .contactOverlay .modal .modalContent .hero {
-        position: relative;
-        width: 100%;
-        height: 200px;
-        background: #FF6284;
-        display: -webkit-box;
-        display: -moz-box;
-        display: box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -moz-box-align: center;
-        box-align: center;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        -o-align-items: center;
-        align-items: center;
-        -ms-flex-align: center;
-        -webkit-box-pack: center;
-        -moz-box-pack: center;
-        box-pack: center;
-        -webkit-justify-content: center;
-        -moz-justify-content: center;
-        -ms-justify-content: center;
-        -o-justify-content: center;
-        justify-content: center;
-        -ms-flex-pack: center;
-        -webkit-box-orient: vertical;
-        -moz-box-orient: vertical;
-        box-orient: vertical;
-        -webkit-box-direction: normal;
-        -moz-box-direction: normal;
-        box-direction: normal;
-        -webkit-flex-direction: column;
-        -moz-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-direction: column; }
-        .contactOverlay .modal .modalContent .hero i.ion-close-round {
-          position: absolute;
-          top: 14px;
-          right: 13px;
-          background: rgba(0, 0, 0, 0.25);
-          padding: 7px 10px 6px;
-          border-radius: 50%;
-          cursor: pointer; }
-          .contactOverlay .modal .modalContent .hero i.ion-close-round:hover {
-            background: rgba(0, 0, 0, 0.5); }
-        .contactOverlay .modal .modalContent .hero h3 {
-          margin: 18px auto 0;
-          font-size: 24px;
-          font-weight: 400; }
-
-@media (max-width: 430px) {
-  body .contactOverlay .modal .modalContent {
-    width: 100%; }
-    body .contactOverlay .modal .modalContent #signup p {
-      width: 90%; } }
-@media (max-width: 320px) {
-  body .contactOverlay .modal #signup #mc_embed_signup #mc_embed_signup_scroll input[type="email"] {
-    width: 300px; } }
-@media (max-height: 517px) {
-  body .contactOverlay .modal {
-    overflow: scroll; }
-    body .contactOverlay .modal .modalContent {
-      height: auto; } }
 header {
   background-image: url(http://d1tdrzz6qd56ia.cloudfront.net/assets/img/headerBG.png);
   background-attachment: fixed;
@@ -1241,7 +1142,6 @@ header {
         font-size: 48px; }
       header .overlay .content h2 {
         font-size: 18px;
-        font-family: "Georgia", serif;
         font-weight: 400;
         color: rgba(255, 255, 255, 0.75);
         margin-bottom: 65px; }
@@ -1335,14 +1235,11 @@ header {
       header .overlay .content #signup #mc_embed_signup form #mc_embed_signup_scroll input[type="submit"] {
         margin-top: 20px;
         width: 90%; } }
-@media (max-height: 414px) {
-  header .overlay {
-    padding: 50px 0 0; }
-    header .overlay .content #logo {
-      margin-bottom: 10px;
-      width: auto; }
-    header .overlay .content h2 {
-      margin-bottom: 30px; } }
+@media (max-width: 414px) {
+  header .overlay .content h1 {
+    margin: 50px 0 70px; }
+  header .overlay .content h2 {
+    display: none; } }
 main {
   overflow: hidden;
   color: black; }
@@ -1415,10 +1312,13 @@ main {
           display: inline-block; }
           main .container .highlights .highlight .content-box p {
             font-size: 14px;
-            margin: 0; }
+            margin: 0;
+            color: #5A5A5A;
+            opacity: 0.6; }
             main .container .highlights .highlight .content-box p.lead {
               font-size: 24px;
-              margin-bottom: 5px; }
+              margin-bottom: 10px;
+              opacity: 1; }
         main .container .highlights .highlight#deadEasy {
           top: 150px;
           right: 25%; }
@@ -1445,10 +1345,14 @@ main {
         width: auto;
         max-width: 300px; } }
 @media (max-width: 450px) {
-  main .container .highlights .highlight .icon-box {
-    margin-right: 10px; }
-  main .container .highlights .highlight .content-box {
-    max-width: 240px; } }
+  main .container .highlights .highlight {
+    text-align: center;
+    margin: 40px 0; }
+    main .container .highlights .highlight .icon-box {
+      margin-bottom: 25px;
+      margin-right: 0;
+      float: none;
+      display: block; } }
 footer {
   background: blue;
   position: relative;
@@ -1528,4 +1432,4 @@ footer {
     position: relative;
     top: auto;
     right: auto;
-    margin-bottom: 50px; } }
+    margin-bottom: 100px; } }
